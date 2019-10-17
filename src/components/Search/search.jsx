@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 
 class Search extends Component {
     constructor(props) {
@@ -17,32 +17,32 @@ class Search extends Component {
 
     componentDidMount() {
         this.getData();
-        setInterval(this.getData, 30000);  
+        setInterval(this.getData, 30000);
     }
 
     getData = () => {
-    const { id } = this.props.match.params;
-    console.log(id);
-    if (id === '') {
-    fetch(`https://aravindtwitter.herokuapp.com/twittersearch?key=adobe`)
+        const { id } = this.props.match.params;
+        console.log(id);
+        if (id === '') {
+            fetch(`https://aravindtwitter.herokuapp.com/twittersearch?key=adobe`)
 
-        .then((response) => response.json())
-        .then((response) => {
-            console.log(response.statuses);
-            this.setState({ show: response.statuses });
-            
-        })
-    }
-    else {
-    fetch(`https://aravindtwitter.herokuapp.com/twittersearch?key=${id}`)
+                .then((response) => response.json())
+                .then((response) => {
+                    console.log(response.statuses);
+                    this.setState({ show: response.statuses });
 
-        .then((response) => response.json())
-        .then((response) => {
-            console.log(response.statuses);
-            this.setState({ show: response.statuses })
-            
-        })
-    }
+                })
+        }
+        else {
+            fetch(`https://aravindtwitter.herokuapp.com/twittersearch?key=${id}`)
+
+                .then((response) => response.json())
+                .then((response) => {
+                    console.log(response.statuses);
+                    this.setState({ show: response.statuses })
+
+                })
+        }
     }
 
     handleChange(event) {
@@ -54,28 +54,28 @@ class Search extends Component {
         return (
             <div>
 
-                    <div className="row">
+                <div className="row">
                     <div className="col-md-6 text-left text-primary">Search@twitter</div>
                     <div className="col-md-6 text-right text-primary">Autorefresh</div>
+                </div>
+
+                <form onSubmit={this.submitForm} className="mr-2 form-div col-md-10">
+
+                    <div className='input-group'>
+                        <input className="form-control"
+                            type="text"
+                            value={this.state.searchtext}
+                            onChange={this.handleChange}
+                            placeholder='Search text'
+                        />
+                        <input className='btn btn-primary' type="submit" value="SEARCH" />
                     </div>
+                </form>
 
-                            <form onSubmit={this.submitForm} className="mr-2 form-div col-md-10">
-                           
-                            <div className='input-group'>
-                                 <input className="form-control"
-                                type="text"
-                                value={this.state.searchtext}
-                                onChange={this.handleChange}
-                                placeholder='Search text'
-                            />
-                            <input className='btn btn-primary' type="submit" value="SEARCH" />
-                            </div>
-                        </form>
-
-                    {show === null
+                {show === null
                     &&
                     <p>Loading...</p>}
-                    {
+                {
                     show !== null
                     &&
                     <div>

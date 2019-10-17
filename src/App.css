@@ -19,35 +19,40 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
-.blog-post{
-    
-    box-shadow: -2px 4px 3px -2px #ccc;
-    border: 1px solid #d8d8d8;
-    margin-right: 10%; 
-    margin-left :10%;
-    margin-bottom: 10px;
+.blog-post {
+
+  box-shadow: -2px 4px 3px -2px #ccc;
+  border: 1px solid #d8d8d8;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 10px;
 }
 
-.image-container{
+.image-container {
   padding: 1% 1%;
 }
 
-.image-container>img{
+.image-container>img {
   height: 100px;
   width: 100px;
 }
 
-.mr-2{
+.mr-2 {
   margin-bottom: 2%;
 }
 
-.form-div{
+.form-div {
   margin-top: 10px;
-    margin-right: 10%; 
-    margin-left :10%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
