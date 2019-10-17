@@ -30,7 +30,7 @@ class Search extends Component {
         .then((response) => {
             console.log(response.statuses);
             this.setState({ show: response.statuses });
-            this.setState({ searchtext: id })
+            
         })
     }
     else {
@@ -40,7 +40,7 @@ class Search extends Component {
         .then((response) => {
             console.log(response.statuses);
             this.setState({ show: response.statuses })
-            this.setState({ searchtext: id })
+            
         })
     }
     }
