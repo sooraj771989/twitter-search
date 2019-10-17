@@ -1,5 +1,6 @@
 # Twitter Search
 
+<img src="doc/img.png">
 
 #### Install dependencies
 ```zsh
