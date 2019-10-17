@@ -13,14 +13,19 @@ const Posts = ({ posts, loading }) => {
     <div>
       {posts.map((post, index) => {
         return (
-          <div className="row " key={index}>
-            <div className="float-left col-md-3 image-container">
-              <img src={post.user.profile_image_url_https} />
+          <div className="row blog-post " key={index}>
+            <div className="float-left col-md-2 image-container">
+              <img
+                src={post.user.profile_image_url_https}
+                alt={post.user.profile_image_url_https}
+              />
             </div>
-            <div className="text-left float-left col-md-9">
+            <div className="text-left float-left col-md-10">
               <span>{post.user.user_name}</span>
               <span>{post.created_at}</span>
-              <p>{post.text}</p>
+              <p>
+                <b>{post.text}</b>
+              </p>
             </div>
           </div>
         );

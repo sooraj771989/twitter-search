@@ -30,7 +30,7 @@
 
 
 .blog-post {
-
+  border-radius: 4px;
   box-shadow: -2px 4px 3px -2px #ccc;
   border: 1px solid #d8d8d8;
   margin-right: 10%;
@@ -45,6 +45,7 @@
 .image-container>img {
   height: 100px;
   width: 100px;
+  border-radius: 4px;
 }
 
 .mr-2 {
