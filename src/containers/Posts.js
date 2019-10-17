@@ -52,6 +52,7 @@ class FetchPosts extends Component {
     return (
       <div>
         <Search history={this.props.history} />
+        <hr/>
         <PostsView {...this.props} />
       </div>
     );
